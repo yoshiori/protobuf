@@ -181,7 +181,6 @@ cc_library(
         "//upb:mini_table",
         "//upb:port",
         "//upb:wire",
-        "//upb:wire_internal",
         "//upb:wire_reader",
     ],
 )
