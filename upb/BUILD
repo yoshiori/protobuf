@@ -112,8 +112,6 @@ cc_library(
         ":mem",
         ":message",
         ":message_accessors",
-        ":message_accessors_internal",
-        ":message_internal",
         ":mini_descriptor",
         ":mini_table",
         ":wire",
@@ -214,26 +212,14 @@ alias(
 )
 
 alias(
-    name = "message_accessors_internal",
-    actual = "//upb/message:accessors_internal",
+    name = "message_compare",
+    actual = "//upb/message:compare",
     visibility = ["//upb:friends"],
 )
 
 alias(
     name = "message_copy",
     actual = "//upb/message:copy",
-    visibility = ["//visibility:public"],
-)
-
-alias(
-    name = "message_internal",
-    actual = "//upb/message:internal",
-    visibility = ["//visibility:public"],
-)
-
-alias(
-    name = "message_internal_types",
-    actual = "//upb/message:internal_types",
     visibility = ["//visibility:public"],
 )
 
@@ -364,10 +350,12 @@ cc_binary(
         ":mem",
         ":message",
         ":message_accessors",
+        ":message_compare",
         ":message_split64",
         ":mini_descriptor",
         ":mini_table",
         ":port",
+        ":wire",
     ],
 )
 
@@ -393,9 +381,8 @@ upb_amalgamation(
         ":mem",
         ":message",
         ":message_accessors",
+        ":message_compare",
         ":message_copy",
-        ":message_internal",
-        ":message_internal_types",
         ":message_tagged_ptr",
         ":message_types",
         ":message_value",
@@ -442,9 +429,8 @@ upb_amalgamation(
         ":mem",
         ":message",
         ":message_accessors",
+        ":message_compare",
         ":message_copy",
-        ":message_internal",
-        ":message_internal_types",
         ":message_tagged_ptr",
         ":message_types",
         ":message_value",
@@ -491,9 +477,8 @@ upb_amalgamation(
         ":mem",
         ":message",
         ":message_accessors",
+        ":message_compare",
         ":message_copy",
-        ":message_internal",
-        ":message_internal_types",
         ":message_tagged_ptr",
         ":message_types",
         ":message_value",
