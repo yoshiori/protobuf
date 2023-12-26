@@ -299,3 +299,15 @@ cc_test(
         "@com_google_googletest//:gtest_main",
     ],
 )
+
+# begin:github_only
+filegroup(
+    name = "test_srcs",
+    srcs = glob(
+        [
+            "**/*.*",
+        ],
+    ),
+    visibility = ["//pkg:__pkg__"],
+)
+# end:github_only

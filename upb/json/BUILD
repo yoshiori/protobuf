@@ -107,3 +107,16 @@ upb_c_proto_library(
 #     ],
 # )
 # end:google_only
+
+# begin:github_only
+filegroup(
+    name = "test_srcs",
+    srcs = glob(
+        [
+            "**/*test.cc",
+            "**/*test.proto",
+        ],
+    ),
+    visibility = ["//pkg:__pkg__"],
+)
+# end:github_only
